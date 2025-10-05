@@ -9,13 +9,13 @@ const Footer = () => {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com',
+      href: 'https://github.com/VinayakNPN',
       color: 'hover:text-gray-600'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn', 
-      href: 'https://linkedin.com',
+      href: 'https://linkedin.com/in/vinayak-chouhan',
       color: 'hover:text-blue-600'
     },
     {

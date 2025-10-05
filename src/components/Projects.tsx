@@ -99,18 +99,18 @@ const Projects = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="group cursor-pointer"
+              className="group cursor-pointer h-full"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               onClick={() => setSelectedProject(index)}
             >
-              <div className="glass rounded-2xl overflow-hidden hover-lift">
+              <div className="glass rounded-2xl overflow-hidden hover-lift h-full flex flex-col">
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -132,7 +132,7 @@ const Projects = () => {
                 </div>
 
                 {/* Project Content */}
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
@@ -158,7 +158,7 @@ const Projects = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}

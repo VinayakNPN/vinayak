@@ -64,58 +64,6 @@
     
     --radius: 0.75rem;
   }
-
-  .dark {
-    /* Material 3 Dark Theme - Rich darks with subtle tinting */
-    --background: 230 20% 8%;
-    --foreground: 220 15% 92%;
-    --surface: 230 15% 12%;
-    --surface-variant: 230 10% 16%;
-    
-    --card: 230 20% 10%;
-    --card-foreground: 220 15% 92%;
-    
-    --popover: 230 20% 10%;
-    --popover-foreground: 220 15% 92%;
-    
-    /* Primary - Brighter for dark mode */
-    --primary: 220 91% 75%;
-    --primary-foreground: 230 20% 8%;
-    --primary-variant: 220 85% 70%;
-    
-    /* Secondary - Adjusted for dark mode */
-    --secondary: 230 15% 18%;
-    --secondary-foreground: 220 15% 92%;
-    --secondary-variant: 230 12% 22%;
-    
-    --muted: 230 15% 16%;
-    --muted-foreground: 220 10% 65%;
-    
-    --accent: 230 15% 18%;
-    --accent-foreground: 220 15% 92%;
-    
-    --destructive: 0 75% 70%;
-    --destructive-foreground: 230 20% 8%;
-    
-    --border: 230 15% 20%;
-    --input: 230 15% 18%;
-    --ring: 220 91% 75%;
-    
-    /* Glassmorphism for dark mode */
-    --glass-bg: 230 20% 10% / 0.8;
-    --glass-border: 230 15% 25% / 0.3;
-    
-    /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 91% 75%), hsl(260 65% 80%));
-    --gradient-hero: linear-gradient(180deg, hsl(230 20% 8%), hsl(230 15% 12%));
-    --gradient-card: linear-gradient(145deg, hsl(230 20% 10%), hsl(230 15% 14%));
-    
-    /* Enhanced shadows for dark mode */
-    --shadow-elevation-1: 0 2px 12px hsl(230 20% 0% / 0.4);
-    --shadow-elevation-2: 0 4px 24px hsl(230 20% 0% / 0.5);
-    --shadow-elevation-3: 0 8px 48px hsl(230 20% 0% / 0.6);
-    --shadow-glow: 0 0 40px hsl(220 91% 75% / 0.4);
-  }
 }
 
 @layer base {

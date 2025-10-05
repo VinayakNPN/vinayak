@@ -1,0 +1,25 @@
+{
+  "messages": [
+    {
+      "id": "msg_001",
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "subject": "Project Collaboration",
+      "message": "Hi Vinayak, I'm interested in collaborating on an AI project. Would love to discuss further.",
+      "timestamp": "2025-10-06T10:30:00Z"
+    },
+    {
+      "id": "msg_002",
+      "name": "Sarah Johnson",
+      "email": "sarah.j@example.com",
+      "subject": "Speaking Opportunity",
+      "message": "We'd like to invite you to speak at our upcoming tech conference about your experience with AI and blockchain.",
+      "timestamp": "2025-10-05T15:45:00Z"
+    }
+  ],
+  "metadata": {
+    "lastMessageId": "msg_002",
+    "totalMessages": 2,
+    "lastUpdated": "2025-10-06T10:30:00Z"
+  }
+}

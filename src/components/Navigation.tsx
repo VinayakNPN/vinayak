@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-interface NavigationProps {
-  theme: 'light' | 'dark';
-}
-
-const Navigation: React.FC<NavigationProps> = ({ theme }) => {
+const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

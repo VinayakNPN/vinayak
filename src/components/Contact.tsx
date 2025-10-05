@@ -39,13 +39,13 @@ const Contact = () => {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com',
+      href: 'https://github.com/VinayakNPN',
       color: 'hover:text-gray-600'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'https://linkedin.com/in/vinayak-chouhan',
       color: 'hover:text-blue-600'
     }
   ];
@@ -107,13 +107,22 @@ const Contact = () => {
     
     setIsSubmitting(true);
     
-    // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Create a new message object
+      const newMessage = {
+        id: `msg_${Date.now()}`,
+        ...formData,
+        timestamp: new Date().toISOString()
+      };
+
+      // Save to localStorage
+      const existingMessages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
+      existingMessages.unshift(newMessage);
+      localStorage.setItem('contactMessages', JSON.stringify(existingMessages));
       
       setIsSubmitted(true);
       toast({
-        title: "Message sent successfully!",
+        title: "Message saved successfully!",
         description: "Thank you for reaching out. I'll get back to you soon.",
       });
       
@@ -131,10 +140,11 @@ const Contact = () => {
       
     } catch (error) {
       toast({
-        title: "Failed to send message",
+        title: "Failed to save message",
         description: "Please try again or contact me directly via email.",
         variant: "destructive"
       });
+      console.error('Error saving message:', error);
     } finally {
       setIsSubmitting(false);
     }

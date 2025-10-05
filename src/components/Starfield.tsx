@@ -1,11 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
-interface StarfieldProps {
-  theme: 'light' | 'dark';
-}
-
-const Starfield: React.FC<StarfieldProps> = ({ theme }) => {
+const Starfield: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const resizeObserverRef = useRef<ResizeObserver | null>(null);
 
@@ -24,7 +20,7 @@ const Starfield: React.FC<StarfieldProps> = ({ theme }) => {
     const positions = new Float32Array(starsCount * 3);
     const colors = new Float32Array(starsCount * 3);
 
-    const starColor = new THREE.Color(theme === 'light' ? 0x111111 : 0xffffff);
+    const starColor = new THREE.Color(0x111111);
 
     for (let i = 0; i < starsCount; i++) {
       const i3 = i * 3;
@@ -49,7 +45,7 @@ const Starfield: React.FC<StarfieldProps> = ({ theme }) => {
       sizeAttenuation: true,
       vertexColors: true,
       transparent: true,
-      opacity: theme === 'light' ? 0.5 : 0.9,
+      opacity: 0.5,
       depthWrite: false
     });
 
@@ -89,7 +85,7 @@ const Starfield: React.FC<StarfieldProps> = ({ theme }) => {
       starsGeometry.dispose();
       starsMaterial.dispose();
     };
-  }, [theme]);
+  }, []);
 
   return (
     <canvas
